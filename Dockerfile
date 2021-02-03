@@ -2,11 +2,11 @@ FROM node:14
 
 WORKDIR /app
 
-ADD package.json /app/
-ADD package-lock.json /app/
+COPY package.json /app/
+COPY package-lock.json /app/
 
 RUN npm install
 
-ADD ./ /app
+COPY ./ /app
 
 CMD npm run start
